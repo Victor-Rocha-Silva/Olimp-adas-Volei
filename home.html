@@ -1,73 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olimpiadas</title>
-    <link rel="stylesheet" href="home/grid.css">
-    <link rel="stylesheet" href="home/styles.css">
-    <script src="Home.js"></script>
-    <link rel="icon" type="image/x-icon" href="olimpiadas.jpg">
+    <title>Ranking</title>
+    <link rel="stylesheet" href="Medalhas/grid.css">
+    <link rel="stylesheet" href="Medalhas/style.css">
+    <link rel="icon" type="image/x-icon" href="Home/logo.png">
 </head>
 <body>
     <header>
-        <img src="home/olimpiadas.jpg" alt="olimpiadas Logo" class="logo">
-        <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>     
+        <img src="Home/olimpiadas.jpg" alt="Refreskar Logo" class="logo">
+        <nav>
+            <ul>
+                
+                <li><a href="#">Home</a></li>
+                <li><a href="SobreVolei.html">Sobre o Volei</a></li>
+                <li><a href="Regras.html">Regras</a></li>
+                <li><a href="Paises.html">Países</a></li>
+                <li><a href="Medalhas.html">Medalhas</a></li>
+                <li><a href="fem.html">Feminino</a></li>
+                <li><a href="masc.html">Masculino</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section class="grid-container">
-            <div class="card">
-                <a href="SobreVolei.html">
-                    <img src="home/olimpiadas.jpg" alt="volei">
-                    <h2>Volei femenino</h2>
-                </a>
-            </div>
-            <div class="card">
-                <a href="Regras.html">
-                    <img src="home/olimpiadas.jpg" alt="volei">
-                    <h2>Regras</h2>
-                </a>
-            </div>
-
-            <div class="card">
-                <a href="Medalhas.html">
-                    <img src="home/olimpiadas.jpg" alt="volei">
-                    <h2>Medalhas</h2>
-                </a>
-            </div>
-            <div class="card">
-                <a href="Ranking.html">
-                    <img src="home/olimpiadas.jpg" alt="volei">
-                    <h2>Ranking</h2>
-                </a>
-            </div>
-            <div class="card">
-                <a href="masc.html">
-                    <img src="home/olimpiadas.jpg" alt="volei">
-                    <h2>Masculino</h2>
-                </a>
-            </div>
-            <div class="card">
-                <a href="fem.html">
-                    <img src="home/olimpiadas.jpg" alt="volei">
-                    <h2>Feminino</h2>
-                </a>
-
-            </div>
-            <div class="card">
-                <a href="Medalhas.html">
-                    <img src="home/olimpiadas.jpg" alt="volei">
-                    <h2>Medalhas</h2>
-                </a>
-            </div>
-        </section>
-    </main>
-    <script>
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-        document.querySelector('.nav-menu').classList.toggle('active');
-});
-    </script>
 </body>
 </html>
 
