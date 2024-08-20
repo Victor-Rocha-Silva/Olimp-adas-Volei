@@ -1,30 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranking</title>
-    <link rel="stylesheet" href="Medalhas/grid.css">
-    <link rel="stylesheet" href="Medalhas/style.css">
-    <link rel="icon" type="image/x-icon" href="Home/logo.png">
+    <title>Página de Vôlei</title>
+    <link rel="stylesheet" href="home/styles.css">
 </head>
 <body>
     <header>
-        <img src="home/logodeparis.png" alt="Refreskar Logo" class="logo">
+        <div class="logo">
+            <img src="home/logodeparis.png" alt="Logo">
+        </div>
         <nav>
             <ul>
-                
                 <li><a href="#">Home</a></li>
-                <li><a href="SobreVolei.html">Sobre o Volei</a></li>
-                <li><a href="Regras.html">Regras</a></li>
-                <li><a href="Paises.html">Países</a></li>
-                <li><a href="Medalhas.html">Medalhas</a></li>
-                <li><a href="fem.html">Feminino</a></li>
-                <li><a href="masc.html">Masculino</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Vôlei</a></li>
+                <li><a href="#">Jogadores</a></li>
+                <li><a href="#">Ranking</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Carrossel de Imagens -->
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="home/olimpiadas.jpg" alt="Imagem 1">
+            <img src="home/olimpiadas.jpg" alt="Imagem 2">
+            <img src="home/olimpiadas.jpg" alt="Imagem 3">
+            <img src="home/olimpiadas.jpg" alt="Imagem 4">
+        </div>
+        <a class="prev" onclick="mudarImagem(-1)">&#10094;</a>
+        <a class="next" onclick="mudarImagem(1)">&#10095;</a>
+    </div>
+
+    <!-- Seção de Jogadores -->
+    <section class="players">
+        <div class="player-card">
+            <img src="player1.jpg" alt="Jogador 1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#">Saiba mais</a>
+        </div>
+        <div class="player-card">
+            <img src="player2.jpg" alt="Jogador 2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#">Saiba mais</a>
+        </div>
+        <div class="player-card">
+            <img src="player3.jpg" alt="Jogador 3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#">Saiba mais</a>
+        </div>
+        <div class="player-card">
+            <img src="player4.jpg" alt="Jogador 4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#">Saiba mais</a>
+        </div>
+    </section>
+
+    <script src="home/script.js"></script>
 </body>
 </html>
-
