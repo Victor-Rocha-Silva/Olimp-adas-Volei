@@ -21,6 +21,4 @@ function mostrarSlides(n) {
 // Carrossel automático a cada 5 segundos
 setInterval(() => {
     mudarImagem(1);
-}, 7000);
-
-
+}, 4000);
