@@ -14,7 +14,7 @@ function mostrarSlides(n) {
     if (n < 0) {
         slideIndex = slides.length - 1;
     }
-    let offset = -slideIndex * 20;
+    let offset = -slideIndex * 25;
     document.querySelector('.carousel-slide').style.transform = `translateX(${offset}%)`;
 }
 
