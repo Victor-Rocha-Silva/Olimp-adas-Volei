@@ -61,7 +61,8 @@ section {
 }
 
 section:nth-of-type(odd) {
-    background-color: #f4f4f4;
+    background-color: #b4b2b2; /*cor do fundo do card*/
+    
 }
 
 section h1 {
@@ -143,11 +144,12 @@ nav ul li a:hover {
 }
 
 .player-card {
-    background-color: white;
+    background-color: rgb(255, 255, 255);/*cor do card */
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 200px;
+    border-radius: 20px;
 }
 
 .player-card img {
