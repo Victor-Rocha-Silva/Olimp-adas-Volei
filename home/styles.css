@@ -83,7 +83,7 @@ nav ul li a:hover {
 }
 
 .carousel-slide img {
-    width: 500%; /* Ajusta a largura para 100% do contêiner */
+    width: 00%; /* Ajusta a largura para 100% do contêiner */
     height: 500px;
     object-fit: cover;
 }
