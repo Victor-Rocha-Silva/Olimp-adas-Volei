@@ -1,161 +1,112 @@
-/* Reset básico para garantir uma consistência entre os navegadores */
-*, *:before, *:after {
-    -webkit-box-sizing: border-box; 
-    -moz-box-sizing: border-box; 
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo geral do corpo e do cabeçalho */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #272727;
+    background-color: #f9f9f9;
 }
 
-/* Estilo do cabeçalho */
 header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background-color: #3b3b3b;
+    align-items: center;
+    background-color: #003399;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    width: 80px;
+    height: 80px;
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    background-color: #0056b3;
+}
+
+main {
     padding: 20px;
-    position: relative;
 }
 
-/* Logo */
-.logo {
-    height: 90px;
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* Botão de menu para dispositivos móveis */
-.menu-toggle {
-    display: none;
+.jogadores {
+    display: flex;
+    flex-direction: column; /* Colocar os jogadores um embaixo do outro */
+    align-items: flex-start;  /* Alinhar os jogadores à esquerda */
+    gap: 20px; /* Espaço entre os jogadores */
+}
+
+.jogador {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.jogador:hover {
+    transform: scale(1.05);
+}
+
+.jogador-btn {
     background: none;
     border: none;
-    font-size: 24px;
     cursor: pointer;
-}
-
-/* Navegação principal */
-nav {
-    display: flex;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-}
-
-/* Menu suspenso para dispositivos móveis */
-.nav-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    width: 200px;
-}
-
-.nav-menu li {
-    border-bottom: 1px solid #ddd;
-}
-
-.nav-menu li:last-child {
-    border-bottom: none;
-}
-
-.nav-menu a {
-    display: block;
-    padding: 10px;
-    color: #000;
-    text-decoration: none;
-}
-
-.nav-menu a:hover {
-    background-color: #f4f4f4;
-}
-
-/* Exibir o menu suspenso ao clicar no botão */
-.nav-menu.active {
-    display: block;
-}
-
-/* Estilo da grade e dos cartões */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-.card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s;
-}
-
-.card a {
-    display: block;
-    color: inherit;
-    text-decoration: none;
-    height: 100%;
-    width: 100%;
-}
-
-.card img {
-    width: 100px;
-    height: 100px;
     margin-bottom: 10px;
+    display: block;
 }
 
-.card h2 {
+.jogador-btn img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.info h2 {
     font-size: 18px;
-    color: #333;
-    margin: 0;
-    padding: 1rem;
+    margin-bottom: 5px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.info p {
+    font-size: 14px;
+    color: #666;
 }
 
-
-/* Responsividade */
-@media only screen and (max-width: 767px) {
-    nav ul {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
+/* Animação para o botão da logo */
+.logo img {
+    transition: transform 0.3s ease;
 }
 
+.logo:hover img {
+    transform: rotate(360deg);
+}
 
+/* Animação para as imagens dos jogadores */
+.jogador-btn img {
+    transition: transform 0.3s ease;
+}
+
+.jogador-btn:hover img {
+    transform: scale(1.1);
+}
