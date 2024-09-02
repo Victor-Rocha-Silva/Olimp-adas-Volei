@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -7,213 +6,105 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
-/* Cabeçalho fixo */
 header {
-    background-color: #0033a0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003399;
     padding: 10px 20px;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
 }
 
-nav ul {
-    list-style: none;
+header .logo img {
+    width: 80px;
+    height: 80px;
+}
+
+header nav {
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a {
-    color: white;
+header nav a {
+    color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-/* Efeito de hover para itens de navegação */
-nav ul li a:hover {
-    color: rgb(106, 106, 214); /* Cor azul para o hover */
+header nav a:hover {
+    background-color: #0056b3;
 }
 
-/* Estilo das seções */
-section {
-    padding: 60px 20px;
-    margin-top: 50px; /* Espaço suficiente para não ficar oculto pelo cabeçalho fixo */
-}
-
-section:nth-of-type(odd) {
-    background-color: #b4b2b2; /*cor do fundo do card*/
-    
-}
-
-section h1 {
-    margin-bottom: 20px;
-}
-
-section p {
-    font-size: 18px;
-}
-    
-
-/* Efeito de hover para itens de navegação */
-nav ul li a:hover {
-    color: rgb(107, 107, 233); /* Altera a cor para azul ao passar o mouse */
-}
-
-/* Carrossel */
-.carousel-container {
-    position: relative;
-    max-width: 100%; /* Ajusta a largura máxima para o contêiner do carrossel */
-    margin: auto;
-    overflow: hidden;
-    text-align: center; /* Garante que o carrossel e os botões fiquem centralizados */
-}
-
-.carousel-slide {
-    display: flex;
-    transition: transform 3s ease-in-out;
-    width: 400%;
-}
-
-.carousel-slide img {
-    width: 00%; /* Ajusta a largura para 100% do contêiner */
-    height: 500px;
-    object-fit: cover;
-}
-
-/* Botões de navegação */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Estilo do botão direito */
-.next {
-    right: 20px; /* Ajusta a distância do botão à direita */
-    border-radius: 3px 0 0 3px;
-}
-
-/* Estilo do botão esquerdo */
-.prev {
-    left: 20px; /* Ajusta a distância do botão à esquerda */
-    border-radius: 3px 0 0 3px;
-}
-
-/* Animação de hover */
-.prev:hover, .next:hover {
-    background-color: blue; /* Altera a cor de fundo para azul */
-    transform: translateY(-50%) scale(1.2); /* Aumenta o tamanho do botão */
-    color: white; /* Garante que o texto permaneça branco */
-}
-
-/* Seção de jogadores */
-.players {
-    display: flex;
-    justify-content: space-around;
+main {
     padding: 20px;
 }
 
-.player-card {
-    background-color: rgb(255, 255, 255);/*cor do card */
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
     text-align: center;
-    width: 200px;
-    border-radius: 20px;
 }
 
-.player-card img {
-    width: 100%;
-    height: auto;
+.jogadores {
+    display: flex;
+    flex-direction: column; /* Colocar os jogadores um embaixo do outro */
+    align-items: flex-start;  /* Alinhar os jogadores à esquerda */
+    gap: 20px; /* Espaço entre os jogadores */
 }
 
-.player-card p {
-    margin: 10px 0;
-    font-size: 14px;
-}
-
-.player-card a {
-    text-decoration: none;
-    color: #0033a0;
-    font-weight: bold;
-}
-
-/* Estiliza a logo como um botão clicável */
-#logo-button {
-    display: inline-block;
-    cursor: pointer;
-    background-color: transparent;
-    text-decoration: none; /* Remove a linha de link padrão */
-}
-
-/* Estiliza a imagem da logo */
-#logo-button img {
-    width: 100px; /* Tamanho da logo */
-    height: 100px;
+.jogador {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
     transition: transform 0.3s ease;
-    
 }
 
-/* Adiciona uma animação de zoom ao passar o mouse */
-#logo-button:hover img {
-    transform: scale(1.1); /* Aumenta a imagem em 10% */
+.jogador:hover {
+    transform: scale(1.05);
 }
 
-
-
-.text-box {
-    padding: 20px;
-    width: 50%;
+.jogador-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 10px;
+    display: block;
 }
 
-.text-box h1 {
-    font-size: 2em;
-    color: #333;
-}
-
-.text-box h3 {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.text-box p {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-.text-box a {
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.image-box {
-    width: 50%;
-}
-
-.image-box img {
+.jogador-btn img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    border-radius: 10px;
 }
+
+.info h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.info p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Animação para o botão da logo */
+.logo img {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: translateY(-10%) scale(1.2);
+}
+
+/* Animação para as imagens dos jogadores */
+.jogador-btn img {
+    transition: transform 0.3s ease;
+}
+
+
