@@ -50,61 +50,44 @@ h1 {
     text-align: center;
 }
 
-.jogadores {
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.carousel-container {
     display: flex;
-    flex-direction: column; /* Colocar os jogadores um embaixo do outro */
-    align-items: flex-start;  /* Alinhar os jogadores à esquerda */
-    gap: 20px; /* Espaço entre os jogadores */
+    transition: transform 0.5s ease-in-out;
 }
 
-.jogador {
-    background-color: #e0e0e0;
-    padding: 15px;
-    border-radius: 10px;
-    width: 250px;
-    transition: transform 0.3s ease;
+.carousel-slide {
+    min-width: 100%;
 }
 
-.jogador:hover {
-    transform: scale(1.05);
-}
-
-.jogador-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.jogador-btn img {
+.carousel img {
     width: 100%;
-    border-radius: 10px;
+    height: auto;
 }
 
-.info h2 {
-    font-size: 18px;
-    margin-bottom: 5px;
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
-.info p {
-    font-size: 14px;
-    color: #666;
+.prev {
+    left: 10px;
 }
 
-/* Animação para o botão da logo */
-.logo img {
-    transition: transform 0.3s ease;
+.next {
+    right: 10px;
 }
-
-.logo:hover img {
-    transform: translateY(-10%) scale(1.2);
-}
-
-/* Animação para as imagens dos jogadores */
-.jogador-btn img {
-    transition: transform 0.3s ease;
-}
-
 

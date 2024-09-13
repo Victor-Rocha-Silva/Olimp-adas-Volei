@@ -1,27 +1,25 @@
-let slideIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const totalSlides = slides.length;
+let currentIndex = 0;
 
-mostrarSlides(slideIndex);
+document.querySelector('.next').addEventListener('click', nextSlide);
+document.querySelector('.prev').addEventListener('click', prevSlide);
 
-// Função para mudar de imagem
-function mudarImagem(n) {
-    mostrarSlides(slideIndex += n);
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
 }
 
-// Função para mostrar slides
-function mostrarSlides(n) {
-    let slides = document.querySelectorAll('.carousel-slide img');
-    let carouselWidth = document.querySelector('.carousel-slide').offsetWidth; // Obtenha a largura total do carrossel
-    if (n >= slides.length) {
-        slideIndex = 0; // Reset to the first slide
-    } else {
-        slideIndex = n; // Atualiza o índice do slide
-    }
-    
-    let offset = -slideIndex * (carouselWidth / slides.length); // Calcula o offset correto
-    document.querySelector('.carousel-slide').style.transform = `translateX(${offset}px)`;
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
 }
 
-// Carrossel automático a cada 4 segundos
-setInterval(() => {
-    mudarImagem(1);
-}, 10000);
+function updateCarousel() {
+    const carouselContainer = document.querySelector('.carousel-container');
+    const offset = -currentIndex * 100;
+    carouselContainer.style.transform = `translateX(${offset}%)`;
+}
+
+// Loop automático a cada 3 segundos
+setInterval(nextSlide, 3000);
