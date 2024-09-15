@@ -1,93 +1,302 @@
 * {
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    margin: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+p,
+li {
+    color: #444;
+    font-size: 14px;
+}
+
+header,
+.navbar {
     background-color: #003399;
-    padding: 10px 20px;
 }
 
-header .logo img {
-    width: 80px;
-    height: 80px;
-}
 
-header nav {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-header nav a:hover {
-    background-color: #0056b3;
-}
-
-main {
-    padding: 20px;
-}
-
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.col-md-12 {
     text-align: center;
 }
 
-
-.carousel {
-    position: relative;
-    width: 80%;
-    max-width: 800px;
-    overflow: hidden;
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-.carousel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+#logo {
+    width: 75px;
 }
 
-.carousel-slide {
-    min-width: 100%;
+.navbar-brand {
+    padding: 0;
+    color: #FFF;
 }
 
-.carousel img {
-    width: 100%;
-    height: auto;
+.navbar-brand:hover {
+    color: #FFF;
 }
 
-.prev, .next {
+#navbar-links a {
+    color: #FFF;
+    text-align: center;
+}
+
+#navbar-links a:hover {
+    transition: 0.5s;
+    color: #515151;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+}
+
+.nav-item.active {
+    border-bottom: 3px solid #FFF;
+}
+
+/* Slider */
+
+#mainslider .carousel-inner img {
+    opacity: 0%;
+    
+}
+
+#mainSlider .carousel-inner,
+#mainSlider .carousel-item {
+    height: 83vh;
+}
+
+#mainSlider .carousel-caption {
+    top: 40%;
+}
+
+#mainSlider .carousel-caption h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+#mainSlider .carousel-caption p {
+    font-size: 30px;
+    font-weight: 300vh;
+    margin-bottom: 100px;
+    color: #FFF;
+}
+
+
+.main-btn {
+    background-color: #003399;
+    color: #FFF;
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    transition: .5s;
+}
+
+.main-btn:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    border-color: #003399;
+}
+
+.carousel-indicators .active {
+    background-color: #003399;
+}
+
+#about-area {
+    background-color: #F9F9F9;
+}
+
+.main-title {
+    color: #444;
+    margin: 0 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.main-title::after {
+    border-top: 2px solid #333;
+    width: 15%;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    top: 60px;
+    left: 42.5%;
+}
+
+
+
+
+ 
+
+.contact-box {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #4693b9;
+}
+
+.contact-box i {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-box p {
+    font-size: 16px;
+}
+
+.contact-tile {
+    font-weight: bold;
+    color: #4693b9;
+}
+
+
+.jogadores {
+    display: flex;
+    flex-direction: column; /* Cada jogador em uma linha */
+    gap: 20px; /* Espaço entre os jogadores */
+}
+
+.jogador {
+    display: flex; /* Exibe conteúdo lado a lado */
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 500px; /* Ajuste conforme necessário */
+    transition: transform 0.3s ease;
+}
+
+.jogador:hover {
+    transform: scale(1.05);
+}
+
+.jogador-btn {
+    background: none;
     border: none;
-    padding: 10px;
     cursor: pointer;
+    padding: 0;
+    margin-right: 15px; /* Espaço entre a imagem e o texto */
+    display: block;
 }
 
-.prev {
-    left: 10px;
+.jogador-btn img {
+    width: 120px; /* Largura da imagem */
+    height: auto;
+    border-radius: 10px;
 }
 
-.next {
-    right: 10px;
+.info {
+    display: flex;
+    flex-direction: column;
 }
 
+.info h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.info p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Animação para o botão da logo */
+.logo img {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: translateY(-10%) scale(1.2);
+}
+
+/* Animação para as imagens dos jogadores */
+.jogador-btn img {
+    transition: transform 0.3s ease;
+}
+
+main h1{
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+} 
+
+
+
+
+
+
+
+
+@media(max-width: 600px) {
+
+    .container {
+        padding: 20px 0;
+    }
+
+    /* Ajusta a altura do carousel e dos itens do carousel */
+    #mainSlider .carousel-inner,
+    #mainSlider .carousel-item {
+        height: auto;
+    }
+
+    /* Ajusta o tamanho do título */
+    #mainSlider .carousel-caption h2 {
+        font-size: 28px;
+    }
+
+    /* Ajusta o tamanho do parágrafo */
+    #mainSlider .carousel-caption p {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    /* Ajusta a posição horizontal */
+    .carousel-caption {
+        left: 10%;
+        right: 10%;
+    }
+
+    /* Ajusta a margem dos elementos */
+    .col-md-4-project-box.dev {
+        margin-right: 25%;
+    }
+}
+
+/* Define tamanho para telas */
+@media(max-width: 425px) {
+
+    /* Ajusta a margem do carousel */
+    #mainSlider {
+        margin-top: 90px;
+    }
+
+    /* Ajusta a posição vertical*/
+    #mainSlider .carousel-caption {
+        top: 5%;
+    }
+
+    /* Ajusta o tamanho do título*/
+    #mainSlider .carousel-caption h2 {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    /* Esconde o parágrafo*/
+    #mainSlider .carousel-caption p {
+        display: none;
+    }
+
+    /* Ajusta o tamanho do botão principal*/
+    .carousel-caption .main-btn {
+        font-size: 20px;
+    }
+}
