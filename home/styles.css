@@ -138,15 +138,16 @@ header,
     height: 530px;
     width: 500px;
     overflow: hidden;
+    
   }
   
-  .image-container {
+  .imageaipai-container      {
     display: flex;
     transform: translateX(0);
     transition: transform 0.5s ease-in-out;
   }
   
-  img {
+  .carouselaipai img {
     width: 500px;
     height: 500px;
     object-fit: cover;
