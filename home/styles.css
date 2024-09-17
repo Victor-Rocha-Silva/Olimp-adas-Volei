@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    
 }
 
 body {
@@ -131,6 +132,50 @@ header,
     left: 42.5%;
 }
 
+  
+  .carouselaipai {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    height: 530px;
+    width: 500px;
+    overflow: hidden;
+  }
+  
+  .image-container {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn {
+    background-color: rebeccapurple;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 49.5%;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .btn:focus {
+    outline: none;
+  }
+  
+
+
 
 
 
@@ -194,6 +239,50 @@ header,
     height: auto;
     border-radius: 10px;
 }
+
+/* Adicionando um contêiner flexível */
+.container-flex {
+    display: flex;
+    justify-content: space-between; /* Espaço entre as seções */
+    align-items: flex-start; /* Alinhamento superior */
+}
+
+/* Estilizando a seção de jogadores */
+.jogadores {
+    display: flex;
+    flex-direction: column; /* Cada jogador em uma linha */
+    gap: 20px; /* Espaço entre os jogadores */
+    width: 60%; /* Ajuste a largura conforme necessário */
+}
+
+
+
+/* Estilizando a tabela de medalhas */
+.ranking table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ranking th, .ranking td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.ranking th {
+    background-color: #003399;
+    color: white;
+}
+
+/* Estilo para as bandeiras */
+.flag {
+    width: 20px; /* Ajuste a largura conforme necessário */
+    height: auto;
+    margin-right: 8px; /* Espaço entre a bandeira e o texto */
+    vertical-align: middle; /* Alinha a bandeira com o texto */
+}
+
+
 
 .info {
     display: flex;
